@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "issues",
+  "info": {
+    "singularName": "issue",
+    "pluralName": "issues",
+    "displayName": "Issues",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "pubdate": {
+      "type": "date"
+    },
+    "states": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::state.state"
+    },
+    "issue_notes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::issue-note.issue-note"
+    },
+    "volume": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::volume.volume"
+    },
+    "state_notes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::state-note.state-note"
+    }
+  }
+}

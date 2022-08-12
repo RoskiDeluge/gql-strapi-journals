@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "volumes",
+  "info": {
+    "singularName": "volume",
+    "pluralName": "volumes",
+    "displayName": "Volumes",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "issues": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::issue.issue"
+    }
+  }
+}

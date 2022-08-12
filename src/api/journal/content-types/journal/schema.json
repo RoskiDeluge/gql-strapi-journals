@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "journals",
+  "info": {
+    "singularName": "journal",
+    "pluralName": "journals",
+    "displayName": "Journals",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Editor": {
+      "type": "string"
+    },
+    "volumes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::volume.volume"
+    }
+  }
+}
